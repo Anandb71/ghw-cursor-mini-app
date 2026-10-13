@@ -1,0 +1,105 @@
+TAP version 13
+# Subtest: createTimer starts a 25 minute focus session that is idle
+ok 1 - createTimer starts a 25 minute focus session that is idle
+  ---
+  duration_ms: 2.424498
+  ...
+# Subtest: startTimer runs an idle or paused timer and leaves a running timer unchanged
+ok 2 - startTimer runs an idle or paused timer and leaves a running timer unchanged
+  ---
+  duration_ms: 0.228827
+  ...
+# Subtest: pauseTimer pauses a running timer and ignores idle or paused timers
+ok 3 - pauseTimer pauses a running timer and ignores idle or paused timers
+  ---
+  duration_ms: 0.111276
+  ...
+# Subtest: resetTimer restores the full length of the current phase and stops the timer
+ok 4 - resetTimer restores the full length of the current phase and stops the timer
+  ---
+  duration_ms: 0.179392
+  ...
+# Subtest: setPhase switches length and stops the timer
+ok 5 - setPhase switches length and stops the timer
+  ---
+  duration_ms: 0.290143
+  ...
+# Subtest: tick counts down one second while running and ignores other states
+ok 6 - tick counts down one second while running and ignores other states
+  ---
+  duration_ms: 0.138499
+  ...
+# Subtest: tick completes a focus session exactly at zero and opens a 5 minute break
+ok 7 - tick completes a focus session exactly at zero and opens a 5 minute break
+  ---
+  duration_ms: 0.147974
+  ...
+# Subtest: tick completes a break and returns to a fresh focus session
+ok 8 - tick completes a break and returns to a fresh focus session
+  ---
+  duration_ms: 0.10224
+  ...
+# Subtest: formatTime renders minutes and seconds
+ok 9 - formatTime renders minutes and seconds
+  ---
+  duration_ms: 0.319677
+  ...
+# Subtest: remainingRatio is the fraction of the current phase still left
+ok 10 - remainingRatio is the fraction of the current phase still left
+  ---
+  duration_ms: 0.374517
+  ...
+# Subtest: addTask appends a trimmed task and rejects a blank title
+ok 11 - addTask appends a trimmed task and rejects a blank title
+  ---
+  duration_ms: 0.664341
+  ...
+# Subtest: toggleTask flips completion for one task
+ok 12 - toggleTask flips completion for one task
+  ---
+  duration_ms: 0.16543
+  ...
+# Subtest: deleteTask removes one task and leaves the others
+ok 13 - deleteTask removes one task and leaves the others
+  ---
+  duration_ms: 0.123905
+  ...
+# Subtest: recordPomodoro increments only the selected task
+ok 14 - recordPomodoro increments only the selected task
+  ---
+  duration_ms: 0.222247
+  ...
+# Subtest: setActiveTask and syncActiveTask keep the selection attached to a real task
+ok 15 - setActiveTask and syncActiveTask keep the selection attached to a real task
+  ---
+  duration_ms: 0.09476
+  ...
+# Subtest: tasks survive a serialize and parse round trip
+ok 16 - tasks survive a serialize and parse round trip
+  ---
+  duration_ms: 0.241529
+  ...
+# Subtest: parseTasks drops malformed storage
+ok 17 - parseTasks drops malformed storage
+  ---
+  duration_ms: 0.18614
+  ...
+# Subtest: theme helpers honor a saved choice and otherwise follow the system
+ok 18 - theme helpers honor a saved choice and otherwise follow the system
+  ---
+  duration_ms: 0.08957
+  ...
+# Subtest: restoreTimer keeps a saved session but pauses one that was running
+ok 19 - restoreTimer keeps a saved session but pauses one that was running
+  ---
+  duration_ms: 0.114411
+  ...
+1..19
+# tests 19
+# suites 0
+# pass 19
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 71.126483

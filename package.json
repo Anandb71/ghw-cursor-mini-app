@@ -1,0 +1,9 @@
+{
+  "name": "hearth-focus",
+  "private": true,
+  "type": "module",
+  "description": "Static Pomodoro and task focus timer.",
+  "scripts": {
+    "test": "node --test"
+  }
+}

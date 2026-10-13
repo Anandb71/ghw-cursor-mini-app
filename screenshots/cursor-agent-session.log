@@ -1,0 +1,23 @@
+Hearth is a static Pomodoro and task timer. All 19 tests pass with `node --test`.
+
+Open it with a local server, because the page loads ES modules:
+
+```bash
+python3 -m http.server 8080
+```
+
+Then visit `http://localhost:8080`.
+
+- **Tasks.** Add, complete, and delete tasks. The list stays in `localStorage`.
+- **Timer.** 25-minute focus and 5-minute break, with start, pause, and reset. A finished focus session switches to the break and, if a task is selected, adds one pomodoro to that task.
+- **Dark mode.** The toggle is saved on this device.
+- **Tests.** `tests/app.test.mjs` covers the pure timer and task functions in `logic.js`. `app.js` imports that module.
+- **Docs.** `README.md` notes this was built with Cursor CLI using model grok-4.7-high for MLH Global Hack Week. `LICENSE` is MIT, copyright Anand Biju 2026.
+
+`package.json` only sets `"type": "module"` so Node treats `logic.js` as an ES module.The local preview server has stopped. That was only for the browser check, so the app itself is unchanged and the 19 tests still pass.
+
+Start it again with `python3 -m http.server 8080` and open `http://localhost:8080`.
+
+real	14m49.128s
+user	0m16.763s
+sys	0m4.802s
